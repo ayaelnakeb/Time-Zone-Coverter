@@ -1,0 +1,124 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ffeb3b, #fdd835, #fbc02d, #f9a825); /* Gradient shades of yellow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px; /* Container width */
+    text-align: center;
+    border: 2px solid #007bff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 2.2em; /* Font size */
+    font-weight: bold;
+}
+
+.converter {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between elements */
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="time"],
+select {
+    width: 100%; /* Ensure full width */
+    max-width: 100%; /* Prevent exceeding container width */
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+input[type="text"]:focus,
+input[type="time"]:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    width: 100%; /* Ensure full width */
+    max-width: 100%; /* Prevent exceeding container width */
+    padding: 15px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.03);
+}
+
+button:active {
+    background-color: #004494;
+}
+
+.zone-info {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px; /* Spacing above info */
+}
+
+/* Responsive Design */
+@media (min-width: 576px) {
+    .converter {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 700px; /* Larger container for larger screens */
+    }
+}

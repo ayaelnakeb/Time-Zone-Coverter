@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Zone Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <h1>Time Zone Converter</h1>
+        <div class="converter">
+            <div class="input-group">
+                <label for="from-time">From Time:</label>
+                <input type="time" id="from-time">
+                <label for="from-zone">From Time Zone:</label>
+                <select id="from-zone" onchange="updateFromZoneInfo()">
+                    <!-- Time zone options will be populated here -->
+                </select>
+                <p id="from-zone-info" class="zone-info"></p>
+            </div>
+            <div class="input-group">
+                <label for="to-zone">To Time Zone:</label>
+                <select id="to-zone" onchange="updateToZoneInfo()">
+                    <!-- Time zone options will be populated here -->
+                </select>
+                <label for="to-time">Converted Time:</label>
+                <input type="text" id="to-time" readonly>
+                <p id="to-zone-info" class="zone-info"></p>
+            </div>
+            <button onclick="convertTime()">Convert</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
